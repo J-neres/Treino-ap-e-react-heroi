@@ -9,6 +9,10 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
+//Liberar arq. da storage
+server.use('/storage/imagemHerois', express.static('storage/imagemHerois'));
+
+//Configuração dos endpoints
 server.use(heroicontroller);
 
 
